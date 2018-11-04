@@ -1,0 +1,38 @@
+{
+  "src_folders": ["tests"],
+  "output_folder" : "reports",
+  "custom_commands_path" : ["./node_modules/nightwatch-xhr-mod/lib"],
+  "custom_assertions_path" : "",
+  "page_objects_path" : ["pages"],
+  "globals_path" : "globals.js",
+  "test_runner": {
+    "type": "mocha",
+    "options": {
+      "bail": true
+    }
+  },
+  "selenium" : {
+    "start_process" : false,
+    "host" : "hub-cloud.browserstack.com",
+    "port" : 80
+  },
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "https://localhost",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub-cloud.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserstack.user": "user",
+        "browserstack.key": "pass",
+        "browser": "chrome",
+        "build": "version1",
+        "project": "Slot Machine Script"
+      }
+    }
+  }
+}
